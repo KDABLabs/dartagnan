@@ -23,3 +23,5 @@ compile_commands.json
 .cache
 main.aot
 CTestCostData.txt
+libAnimal.so
+animal_export.h

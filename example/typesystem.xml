@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<typesystem package="AnimalBindings">
+    <primitive-type name="int"/>
+    <primitive-type name="bool"/>
+    <primitive-type name="char"/>
+    <primitive-type name="float"/>
+    <primitive-type name="double"/>
+    <primitive-type name="unsigned int"/>
+
+    <object-type name="Animal" />
+   </typesystem>

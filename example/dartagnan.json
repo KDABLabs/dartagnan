@@ -1,0 +1,5 @@
+{
+    "exportsHeaderName": "animal_export.h",
+    "exportsMacroName": "ANIMAL_EXPORT",
+    "bindingsLibrary": "Animal"
+}

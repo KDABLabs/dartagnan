@@ -1,0 +1,14 @@
+name: DartBindingsTest
+description: A test app to test dart bindings
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  AnimalBindings:
+    path: '../generated/AnimalBindings/dart/'
+  ffi: ^2.1.0
+
+dev_dependencies:
+  pedantic: ^1.9.0
+
