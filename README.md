@@ -2,9 +2,9 @@
 
 ![Build Status](https://github.com/iamsergio/dartagnan/actions/workflows/build.yml/badge.svg)
 
-Dartagnan is a POC of C++ Dart bindings generator.
-Unlike other generators, Dartagnan preserves OOP semantics when crossing language barrier.
-A Dart class can inherit from a C++ class, override virtual methods and still get dynamic dispatch working.
+Dartagnan is a POC of C++ Dart bindings generator.<br>
+Unlike other generators, Dartagnan preserves OOP semantics when crossing language barrier.<br>
+A Dart class can inherit from a C++ class, override virtual methods and still get dynamic dispatch working.<br>
 In other words, whether the base class is Dart or C++ is irrelevant from the user's prespective, as inheritance
 still works as supposed to.
 
@@ -17,26 +17,27 @@ class Animal {
 public:
     // non-virtual! for example purposes
     void eat() {
-        std::cout << "eat from C++";
+        std::cout << "eat from C++\n";
         openMouth();
         closeMouth();
     }
 
     virtual void openMouth() {
-        std::cout << "openMouth from C++";
+        std::cout << "openMouth from C++\n";
     }
 
     virtual void closeMouth() {
-        std::cout << "closeMouth from C++";
+        std::cout << "closeMouth from C++\n";
     }
 };
 ```
 
 ```dart
-class MyDartAlligator extends MyBindings.Animal {
+class MyDartAlligator extends MyBindings.Animal
+{
     @override
     void openMouth() {
-        print("openMouth from Dart");
+        print("openMouth from Dart\n");
     }
 }
 
