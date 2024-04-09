@@ -23,12 +23,14 @@ jobs:
       - name: Install ninja
         uses: turtlesec-no/get-ninja@main
 
+      - name: Install Dart SDK
+        uses: dart-lang/setup-dart@v1
+
       - name: Build example
         run: |
           cd example/
           cmake -G Ninja .
           ninja
-          cd ..
 
       - name: pub get
         run: |
