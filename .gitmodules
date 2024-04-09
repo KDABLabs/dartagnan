@@ -1,0 +1,3 @@
+[submodule "3rdparty/shiboken"]
+	path = 3rdparty/shiboken
+	url = https://github.com/KDABLabs/pyside2-setup.git
