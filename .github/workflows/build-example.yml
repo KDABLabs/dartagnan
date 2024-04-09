@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2024 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+#
+# SPDX-License-Identifier: MIT
+
+# Builds the example with the pre-generated bindings.
+# Does not generate bindings.
+
+name: Build Example
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      - name: Install ninja
+        uses: turtlesec-no/get-ninja@main
+
+      - name: Build example
+        run: |
+          cmake .
+          ninja
+
+      - name: pub get
+        run |
+          cd app
+          dart pub get
+          cd ..
+          dart run app/bin/main.dart
