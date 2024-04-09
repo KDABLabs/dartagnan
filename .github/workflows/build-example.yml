@@ -38,3 +38,5 @@ jobs:
           dart pub get
           cd ..
           dart run app/bin/main.dart
+        env:
+          LD_LIBRARY_PATH: .:$LD_LIBRARY_PATH
