@@ -32,9 +32,9 @@ jobs:
           cmake -G Ninja .
           ninja
 
-      - name: pub get
+      - name: Run example
         run: |
-          cd app
+          cd example/app
           dart pub get
           cd ..
           dart run app/bin/main.dart
